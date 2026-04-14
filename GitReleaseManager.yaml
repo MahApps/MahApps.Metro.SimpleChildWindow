@@ -1,7 +1,7 @@
 create:
   include-footer: true
   footer-heading: Where to get it
-  footer-content: You can download this release from [MahApps.Metro.SimpleChildWindow](https://github.com/punker76/MahApps.Metro.SimpleChildWindow/releases/{milestone})
+  footer-content: You can download this release from [MahApps.Metro.SimpleChildWindow](https://github.com/MahApps/MahApps.Metro.SimpleChildWindow/releases/{milestone})
   footer-includes-milestone: true
   milestone-replace-text: '{milestone}'
 export:

@@ -2,7 +2,7 @@
 
 <div align="center">
   <br />
-  <a href="https://github.com/punker76/MahApps.Metro.SimpleChildWindow">
+  <a href="https://github.com/MahApps/MahApps.Metro.SimpleChildWindow">
     <img alt="MahApps.Metro.SimpleChildWindow" width="200" heigth="200" src="./MahApps.Metro.SimpleChildWindow.png">
   </a>
   <h1>MahApps.Metro.SimpleChildWindow</h1>
@@ -12,9 +12,6 @@
   <p>
     Supporting .NET Framework 4.6.2 and greater, .NET Core 3.0 and 3.1, .NET 5 (on Windows)
   </p>
-  <a href="https://gitter.im/punker76/MahApps.Metro.SimpleChildWindow">
-    <img src="https://img.shields.io/badge/Gitter-Join%20Chat-green.svg?style=flat-square">
-  </a>
   <a href="https://twitter.com/punker76">
     <img src="https://img.shields.io/badge/twitter-%40punker76-55acee.svg?style=flat-square">
   </a>
@@ -31,28 +28,28 @@
   <a href="https://www.nuget.org/packages/MahApps.Metro.SimpleChildWindow">
     <img src="https://img.shields.io/nuget/vpre/MahApps.Metro.SimpleChildWindow.svg?style=flat-square&label=nuget-pre">
   </a>
-  <a href="https://github.com/punker76/MahApps.Metro.SimpleChildWindow/releases/latest">
-    <img src="https://img.shields.io/github/release/punker76/MahApps.Metro.SimpleChildWindow.svg?style=flat-square">
+  <a href="https://github.com/MahApps/MahApps.Metro.SimpleChildWindow/releases/latest">
+    <img src="https://img.shields.io/github/release/MahApps/MahApps.Metro.SimpleChildWindow.svg?style=flat-square">
   </a>
   <br />
-  <a href="https://ci.appveyor.com/project/punker76/mahapps-metro-simplechildwindow/branch/master">
-    <img alt="masterstatus" src="https://img.shields.io/appveyor/ci/punker76/mahapps-metro-simplechildwindow/master.svg?style=flat-square&&label=master">
+  <a href="https://ci.appveyor.com/project/MahApps/mahapps-metro-simplechildwindow/branch/master">
+    <img alt="masterstatus" src="https://img.shields.io/appveyor/ci/MahApps/mahapps-metro-simplechildwindow/master.svg?style=flat-square&&label=master">
   </a>
-  <a href="https://ci.appveyor.com/project/punker76/mahapps-metro-simplechildwindow/branch/dev">
-    <img alt="devstatus" src="https://img.shields.io/appveyor/ci/punker76/mahapps-metro-simplechildwindow/dev.svg?style=flat-square&&label=dev">
+  <a href="https://ci.appveyor.com/project/MahApps/mahapps-metro-simplechildwindow/branch/dev">
+    <img alt="devstatus" src="https://img.shields.io/appveyor/ci/MahApps/mahapps-metro-simplechildwindow/dev.svg?style=flat-square&&label=dev">
   </a>
   <br />
-  <a href="https://github.com/punker76/MahApps.Metro.SimpleChildWindow/issues">
-    <img src="https://img.shields.io/github/issues-raw/punker76/MahApps.Metro.SimpleChildWindow.svg?style=flat-square">
+  <a href="https://github.com/MahApps/MahApps.Metro.SimpleChildWindow/issues">
+    <img src="https://img.shields.io/github/issues-raw/MahApps/MahApps.Metro.SimpleChildWindow.svg?style=flat-square">
   </a>
-  <a href="https://github.com/punker76/MahApps.Metro.SimpleChildWindow/issues">
-    <img src="https://img.shields.io/github/issues-closed-raw/punker76/MahApps.Metro.SimpleChildWindow.svg?style=flat-square">
+  <a href="https://github.com/MahApps/MahApps.Metro.SimpleChildWindow/issues">
+    <img src="https://img.shields.io/github/issues-closed-raw/MahApps/MahApps.Metro.SimpleChildWindow.svg?style=flat-square">
   </a>
-  <a href="https://github.com/punker76/MahApps.Metro.SimpleChildWindow/issues">
-    <img src="https://img.shields.io/github/issues-pr-raw/punker76/MahApps.Metro.SimpleChildWindow.svg?style=flat-square">
+  <a href="https://github.com/MahApps/MahApps.Metro.SimpleChildWindow/issues">
+    <img src="https://img.shields.io/github/issues-pr-raw/MahApps/MahApps.Metro.SimpleChildWindow.svg?style=flat-square">
   </a>
-  <a href="https://github.com/punker76/MahApps.Metro.SimpleChildWindow/issues">
-    <img src="https://img.shields.io/github/issues-pr-closed-raw/punker76/MahApps.Metro.SimpleChildWindow.svg?style=flat-square">
+  <a href="https://github.com/MahApps/MahApps.Metro.SimpleChildWindow/issues">
+    <img src="https://img.shields.io/github/issues-pr-closed-raw/MahApps/MahApps.Metro.SimpleChildWindow.svg?style=flat-square">
   </a>
 </div>
 
@@ -85,10 +82,6 @@ We use these awesome tools to develop, Build and deploy MahApps.Metro.SimpleChil
 
 This framework is free and can be used for free, open source and commercial applications. MahApps.Metro and MahApps.Metro.SimpleChildWindow (all code, NuGets and binaries) are under the [MIT License (MIT)](./LICENSE). It's tested, used and contributed by many awesome people. So hit the magic :star: button, we appreciate it!!! :pray:
 
-The core team member(s), MahApps.Metro contributors and contributors in the ecosystem do this open source work in their free time. If you use MahApps.Metro a serious task, and you'd like us to invest more time on it, please donate. This project increases your income/productivity/usability too.
-
-[Become a sponsor](https://github.com/sponsors/punker76) and show your support to this open source project.
-
 # :pray: All OpenCollective (archived) Backers :heart:
 
 [![Backers](https://opencollective.com/mahappsmetro/backers.svg?button=false)](https://opencollective.com/mahappsmetro#section-contributors)
@@ -115,7 +108,7 @@ The core team member(s), MahApps.Metro contributors and contributors in the ecos
 
 [The MIT License (MIT)](./LICENSE)
 
-[wiki]: https://github.com/punker76/MahApps.Metro.SimpleChildWindow/wiki
-[childwindow]: https://github.com/punker76/MahApps.Metro.SimpleChildWindow/wiki/ChildWindow
-[childwindowmanager]: https://github.com/punker76/MahApps.Metro.SimpleChildWindow/wiki/ChildWindowManager
-[samples]: https://github.com/punker76/MahApps.Metro.SimpleChildWindow/wiki/Samples
+[wiki]: https://github.com/MahApps/MahApps.Metro.SimpleChildWindow/wiki
+[childwindow]: https://github.com/MahApps/MahApps.Metro.SimpleChildWindow/wiki/ChildWindow
+[childwindowmanager]: https://github.com/MahApps/MahApps.Metro.SimpleChildWindow/wiki/ChildWindowManager
+[samples]: https://github.com/MahApps/MahApps.Metro.SimpleChildWindow/wiki/Samples
