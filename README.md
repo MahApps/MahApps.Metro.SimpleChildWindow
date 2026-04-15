@@ -2,7 +2,7 @@
 
 <div align="center">
   <br />
-  <a href="https://github.com/MahApps/MahApps.Metro.SimpleChildWindow">
+  <a href="https://github.com/MahApps/MahApps.Metro.SimpleChildWindow">
     <img alt="MahApps.Metro.SimpleChildWindow" width="200" heigth="200" src="./MahApps.Metro.SimpleChildWindow.png">
   </a>
   <h1>MahApps.Metro.SimpleChildWindow</h1>
@@ -10,15 +10,8 @@
     A simple child window for <a href="https://github.com/MahApps/MahApps.Metro">MahApps.Metro</a>.
   </p>
   <p>
-    Supporting .NET Framework 4.6.2 and greater, .NET Core 3.0 and 3.1, .NET 5 (on Windows)
+    Supporting .NET Framework 4.6.2 and greater, .NET Core 3.1, .NET 5 and .NET 6 (on Windows)
   </p>
-  <a href="https://twitter.com/punker76">
-    <img src="https://img.shields.io/badge/twitter-%40punker76-55acee.svg?style=flat-square">
-  </a>
-  <a href="./LICENSE">
-    <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square">
-  </a>
-  <br />
   <a href="https://www.nuget.org/packages/MahApps.Metro.SimpleChildWindow">
     <img src="https://img.shields.io/nuget/dt/MahApps.Metro.SimpleChildWindow.svg?style=flat-square">
   </a>
@@ -28,15 +21,15 @@
   <a href="https://www.nuget.org/packages/MahApps.Metro.SimpleChildWindow">
     <img src="https://img.shields.io/nuget/vpre/MahApps.Metro.SimpleChildWindow.svg?style=flat-square&label=nuget-pre">
   </a>
+  <br />
+  <a href="https://ci.appveyor.com/project/punker76/mahapps-metro-simplechildwindow/branch/main">
+    <img alt="main status" src="https://img.shields.io/appveyor/ci/punker76/mahapps-metro-simplechildwindow/master.svg?style=flat-square&&label=main">
+  </a>
+  <a href="https://ci.appveyor.com/project/punker76/mahapps-metro-simplechildwindow/branch/dev">
+    <img alt="dev status" src="https://img.shields.io/appveyor/ci/punker76/mahapps-metro-simplechildwindow/dev.svg?style=flat-square&&label=develop">
+  </a>
   <a href="https://github.com/MahApps/MahApps.Metro.SimpleChildWindow/releases/latest">
     <img src="https://img.shields.io/github/release/MahApps/MahApps.Metro.SimpleChildWindow.svg?style=flat-square">
-  </a>
-  <br />
-  <a href="https://ci.appveyor.com/project/MahApps/mahapps-metro-simplechildwindow/branch/master">
-    <img alt="masterstatus" src="https://img.shields.io/appveyor/ci/MahApps/mahapps-metro-simplechildwindow/master.svg?style=flat-square&&label=master">
-  </a>
-  <a href="https://ci.appveyor.com/project/MahApps/mahapps-metro-simplechildwindow/branch/dev">
-    <img alt="devstatus" src="https://img.shields.io/appveyor/ci/MahApps/mahapps-metro-simplechildwindow/dev.svg?style=flat-square&&label=dev">
   </a>
   <br />
   <a href="https://github.com/MahApps/MahApps.Metro.SimpleChildWindow/issues">
@@ -53,7 +46,7 @@
   </a>
 </div>
 
-## Getting started
+## Let's get started
 
 The [NuGet](https://www.nuget.org/packages/MahApps.Metro.SimpleChildWindow) package contains an assembly with the `ChildWindow` class and the `ChildWindowManager` helper class inside.
 
@@ -62,27 +55,22 @@ The [NuGet](https://www.nuget.org/packages/MahApps.Metro.SimpleChildWindow) pack
 * [ChildWindow][childwindow]
 * [ChildWindowManager][childwindowmanager]
 
-## Tools
+## Dev Tools
 
-We use these awesome tools to develop, Build and deploy MahApps.Metro.SimpleChildWindow.
+We want to give some :heart: to this dev tools which makes the work a little bit easier!
 
-<div>
-  <a href="https://cakebuild.net/">
-    <img alt="cakebuild.net" width="128" heigth="128" vspace="20" hspace="20" src="./docs/cake-medium.png">
-  </a>
-  <a href="https://www.jetbrains.com/resharper/">
-    <img alt="R#" width="128" heigth="128" vspace="20" hspace="20" src="./docs/icon_ReSharper.png">
-  </a>
-  <a href="https://www.appveyor.com/">
-    <img alt="appveyor" width="128" heigth="128" vspace="20" hspace="20" src="./docs/Appveyor_logo.svg">
-  </a>
-</div>
+- [Cake (C# Make)](https://cakebuild.net/) a free and open source cross-platform build automation system.
+- [ReSharper](https://www.jetbrains.com/resharper/)
+- [Rider](https://www.jetbrains.com/rider/)
+- [AppVeyor](https://www.appveyor.com/) CI/CD service for Windows, Linux and macOS
+
+A big thank goes to [JetBrains](https://www.jetbrains.com) who provide an [Open Source License](https://www.jetbrains.com/community/opensource/) for ReSharper and Rider.
 
 ## Sponsoring
 
 This framework is free and can be used for free, open source and commercial applications. MahApps.Metro and MahApps.Metro.SimpleChildWindow (all code, NuGets and binaries) are under the [MIT License (MIT)](./LICENSE). It's tested, used and contributed by many awesome people. So hit the magic :star: button, we appreciate it!!! :pray:
 
-# :pray: All OpenCollective (archived) Backers :heart:
+### :pray: All OpenCollective Backers (archived) :heart:
 
 [![Backers](https://opencollective.com/mahappsmetro/backers.svg?button=false)](https://opencollective.com/mahappsmetro#section-contributors)
 
@@ -106,7 +94,9 @@ This framework is free and can be used for free, open source and commercial appl
 
 ## License
 
-[The MIT License (MIT)](./LICENSE)
+Copyright © .NET Foundation, Jan Karger, Brendan Forster, Dennis Daume, Alex Mitchell, Paul Jenkins and contributors.
+
+MahApps.Metro is provided as-is under the MIT license. For more information see [LICENSE](./LICENSE).
 
 [wiki]: https://github.com/MahApps/MahApps.Metro.SimpleChildWindow/wiki
 [childwindow]: https://github.com/MahApps/MahApps.Metro.SimpleChildWindow/wiki/ChildWindow
