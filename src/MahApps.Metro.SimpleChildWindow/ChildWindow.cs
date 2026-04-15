@@ -1,7 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
@@ -11,8 +10,8 @@ using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Threading;
-using ControlzEx.Native;
 using MahApps.Metro.Controls;
+using MahApps.Metro.SimpleChildWindow.Native;
 
 namespace MahApps.Metro.SimpleChildWindow
 {
@@ -354,7 +353,7 @@ namespace MahApps.Metro.SimpleChildWindow
                                           typeof(ChildWindow),
                                           new FrameworkPropertyMetadata(SystemFonts.CaptionFontSize, FrameworkPropertyMetadataOptions.Inherits | FrameworkPropertyMetadataOptions.AffectsRender));
 
-        /// <summary> 
+        /// <summary>
         /// The FontSize property specifies the size of the title.
         /// </summary>
         [TypeConverter(typeof(FontSizeConverter))]
@@ -371,7 +370,7 @@ namespace MahApps.Metro.SimpleChildWindow
                                           typeof(ChildWindow),
                                           new FrameworkPropertyMetadata(SystemFonts.CaptionFontFamily, FrameworkPropertyMetadataOptions.Inherits | FrameworkPropertyMetadataOptions.AffectsRender));
 
-        /// <summary> 
+        /// <summary>
         /// The FontFamily property specifies the font family of the title.
         /// </summary>
         [Bindable(true)]
@@ -1017,7 +1016,7 @@ namespace MahApps.Metro.SimpleChildWindow
             {
                 if (string.IsNullOrEmpty(this.closeText))
                 {
-                    this.closeText = this.GetCaption(905);
+                    this.closeText = WinApiHelper.GetCaption(905);
                 }
 
                 return this.closeText;
@@ -1260,23 +1259,5 @@ namespace MahApps.Metro.SimpleChildWindow
 
             this.OnPreviewKeyUp(e);
         }
-
-#pragma warning disable 618
-        private SafeLibraryHandle user32;
-#pragma warning restore 618
-
-#pragma warning disable 618
-        private string GetCaption(int id)
-        {
-            if (this.user32 == null)
-            {
-                this.user32 = UnsafeNativeMethods.LoadLibrary(Environment.SystemDirectory + "\\User32.dll");
-            }
-
-            var sb = new StringBuilder(256);
-            UnsafeNativeMethods.LoadString(this.user32, (uint)id, sb, sb.Capacity);
-            return sb.ToString().Replace("&", "");
-        }
-#pragma warning restore 618
     }
 }

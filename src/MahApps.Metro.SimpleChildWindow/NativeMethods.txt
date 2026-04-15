@@ -1,0 +1,7 @@
+GetMonitorInfo
+GetWindowPlacement
+LoadLibrary
+LoadString
+MonitorFromWindow
+MoveWindow
+SetWindowPlacement

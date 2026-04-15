@@ -1,4 +1,4 @@
-<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project>
     <PropertyGroup>
         <SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
         <IsBuildingWpfTempProj Condition="$(MSBuildProjectName.Contains('_wpftmp')) != 'true'">false</IsBuildingWpfTempProj>
@@ -7,22 +7,78 @@
 
     <!-- Project properties -->
     <PropertyGroup>
-        <TargetFrameworks>net462;net47;net48;net5.0-windows;net6.0-windows</TargetFrameworks>
+        <TargetFrameworks>net8.0-windows;net6.0-windows;net462</TargetFrameworks>
+        <LangVersion>latestmajor</LangVersion>
+
+        <IsBuildingForLegacyFramework>false</IsBuildingForLegacyFramework>
+        <IsBuildingForLegacyFramework Condition="$(TargetFramework.Contains('net46')) == 'true' or $(TargetFramework.Contains('net47')) == 'true' or $(TargetFramework.Contains('net48')) == 'true'">true</IsBuildingForLegacyFramework>
+
         <AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
         <GenerateDocumentationFile>false</GenerateDocumentationFile>
-        <AutoGenerateBindingRedirects Condition="$(DefineConstants.Contains(NETCOREAPP)) == false">true</AutoGenerateBindingRedirects>
-        <LangVersion>latestmajor</LangVersion>
+        <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+
+        <AutoGenerateBindingRedirects Condition="'$(IsBuildingForLegacyFramework)' == 'true'">true</AutoGenerateBindingRedirects>
+
+        <UseWPF>true</UseWPF>
+        <!-- <Nullable>enable</Nullable> -->
+
         <NoWarn>$(NoWarn);CS1591</NoWarn>
         <NoError>$(NoError);CS1591</NoError>
-        <UseWPF>true</UseWPF>
-        <!-- <TreatWarningsAsErrors>true</TreatWarningsAsErrors> -->
-        <!-- <Nullable>enable</Nullable> -->
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    </PropertyGroup>
+
+    <!-- AssemblyInfo -->
+    <PropertyGroup>
+        <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+        <!-- Required for Hot Reload (See https://github.com/dotnet/sdk/issues/36666) -->
+        <IncludeSourceRevisionInInformationalVersion Condition="'$(Configuration)' == 'Debug'">false</IncludeSourceRevisionInInformationalVersion>
+
+        <Company>MahApps</Company>
+        <Product>MahApps.Metro.SimpleChildWindow</Product>
+        <Copyright>Copyright © $([System.DateTime]::Today.ToString(yyyy)) .NET Foundation and Contributors. All rights reserved.</Copyright>
+        <Description>A simple child window for MahApps.Metro (A toolkit for creating Metro / Modern UI styled WPF applications).</Description>
+
+        <Version Condition="'$(Version)' == ''">3.0.0.0</Version>
+        <AssemblyVersion Condition="'$(AssemblyVersion)' == ''">3.0.0.0</AssemblyVersion>
+        <FileVersion Condition="'$(FileVersion)' == ''">3.0.0.0</FileVersion>
+        <InformationalVersion Condition="'$(InformationalVersion)' == ''">SRC</InformationalVersion>
+    </PropertyGroup>
+
+    <!-- Sign assembly -->
+    <PropertyGroup>
+        <SignAssembly>True</SignAssembly>
+        <AssemblyOriginatorKeyFile>$(MSBuildThisFileDirectory)/childwindow.public.snk</AssemblyOriginatorKeyFile>
+        <DelaySign>false</DelaySign>
+        <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
+    </PropertyGroup>
+
+    <!-- SourceLink -->
+    <PropertyGroup>
+        <!-- Optional: Declare that the Repository URL can be published to NuSpec -->
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <!-- Optional: Embed source files that are not tracked by the source control manager to the PDB -->
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <!-- By using EmbedAllSources we don't need SourceLink itself -->
+        <!-- https://github.com/dotnet/sourcelink/blob/master/docs/README.md#embedallsources -->
+        <EmbedAllSources>true</EmbedAllSources>
+    </PropertyGroup>
+
+    <!-- PDB-Options -->
+    <PropertyGroup>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>Embedded</DebugType>
     </PropertyGroup>
 
     <!-- Add the references for all projects and targets -->
     <ItemGroup>
-        <PackageReference Include="JetBrains.Annotations" PrivateAssets="All" IncludeAssets="build;compile" />
-        <PackageReference Include="WpfAnalyzers" PrivateAssets="all" IncludeAssets="build;analyzers" />
+        <PackageReference Include="JetBrains.Annotations">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>compile; build</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="WpfAnalyzers">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>build;analyzers</IncludeAssets>
+        </PackageReference>
     </ItemGroup>
 
     <ItemGroup>

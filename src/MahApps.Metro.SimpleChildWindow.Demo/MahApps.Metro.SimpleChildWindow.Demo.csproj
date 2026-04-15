@@ -2,9 +2,9 @@
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
     <!-- Project properties -->
     <PropertyGroup>
+        <TargetFrameworks>net9.0-windows;net8.0-windows;net6.0-windows;net462</TargetFrameworks>
         <AssemblyName>MahApps.Metro.SimpleChildWindow.Demo</AssemblyName>
         <RootNamespace>MahApps.Metro.SimpleChildWindow.Demo</RootNamespace>
-        <DisableFody Condition=" '$(Configuration)' == 'Debug' or $(DefineConstants.Contains(NETCOREAPP)) == true ">true</DisableFody>
         <GenerateDocumentationFile>false</GenerateDocumentationFile>
         <!-- Workaround for https://github.com/dotnet/sourcelink/issues/91 -->
         <DeterministicSourcePaths Condition="'$(EnableSourceLink)' == ''">false</DeterministicSourcePaths>
@@ -21,33 +21,24 @@
         <PackageReference Include="MahApps.Metro.IconPacks" />
     </ItemGroup>
 
-    <ItemGroup Condition="$(DefineConstants.Contains(NETCOREAPP)) == false">
-        <PackageReference Include="Costura.Fody">
-          <PrivateAssets>all</PrivateAssets>
-          <IncludeAssets>compile; runtime; build; native; contentfiles; analyzers</IncludeAssets>
-        </PackageReference>
-    </ItemGroup>
-
     <ItemGroup>
         <None Include="app.manifest" />
     </ItemGroup>
 
-    <ItemGroup>
-        <Compile DependentUpon="%(Filename)" SubType="Code" Update="**\obj\**\*.g$(DefaultLanguageSourceExtension)" />
-        <Compile DependentUpon="%(Filename)" SubType="Designer" Update="**\*.xaml$(DefaultLanguageSourceExtension)" />
-    </ItemGroup>
-    
     <ItemGroup>
       <Compile Update="Properties\Settings.Designer.cs">
         <DesignTimeSharedInput>True</DesignTimeSharedInput>
         <AutoGen>True</AutoGen>
         <DependentUpon>Settings.settings</DependentUpon>
       </Compile>
-    </ItemGroup>
-    <ItemGroup>
       <None Update="Properties\Settings.settings">
         <Generator>SettingsSingleFileGenerator</Generator>
         <LastGenOutput>Settings.Designer.cs</LastGenOutput>
       </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile DependentUpon="%(Filename)" SubType="Code" Update="**\obj\**\*.g$(DefaultLanguageSourceExtension)" />
+        <Compile DependentUpon="%(Filename)" SubType="Designer" Update="**\*.xaml$(DefaultLanguageSourceExtension)" />
     </ItemGroup>
 </Project>

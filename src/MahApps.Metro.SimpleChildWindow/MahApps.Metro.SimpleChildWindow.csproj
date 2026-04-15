@@ -9,8 +9,39 @@
         <OutputType>Library</OutputType>
     </PropertyGroup>
 
+    <!-- NuGet -->
+    <PropertyGroup>
+        <Authors>Jan Karger, Bastian Schmidt, Dennis Daume, Brendan Forster, Alex Mitchell, Paul Jenkins, Jake Ginnivan</Authors>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/MahApps/MahApps.Metro.SimpleChildWindow</PackageProjectUrl>
+        <PackageIcon>MahApps.Metro.SimpleChildWindow.png</PackageIcon>
+        <PackageTags>WPF;UI;Metro;Modern;Material;XAML;Toolkit;Library;.NET;OSS;OpenSource</PackageTags>
+        <PackageReleaseNotes>https://github.com/MahApps/MahApps.Metro.SimpleChildWindow/releases</PackageReleaseNotes>
+        <RepositoryUrl>https://github.com/MahApps/MahApps.Metro.SimpleChildWindow.git</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <GenerateLibraryLayout>true</GenerateLibraryLayout>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\..\MahApps.Metro.SimpleChildWindow.png">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <SourceRoot Include="$(NuGetPackageRoot)" Condition="'$(NuGetPackageRoot)' != ''" />
+    </ItemGroup>
+
     <ItemGroup>
        <PackageReference Include="MahApps.Metro" />
+       <PackageReference Include="Microsoft.Windows.CsWin32">
+         <PrivateAssets>all</PrivateAssets>
+         <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+       </PackageReference>
+       <PackageReference Include="System.Memory" Condition="'$(IsBuildingForLegacyFramework)' == 'false'" />
+       <PackageReference Include="System.ValueTuple" Condition="'$(IsBuildingForLegacyFramework)' == 'true'" />
     </ItemGroup>
 
 </Project>
