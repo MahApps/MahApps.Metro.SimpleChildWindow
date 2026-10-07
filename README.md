@@ -46,6 +46,9 @@
   </a>
 </div>
 
+> [!IMPORTANT]
+> This package stops here. The child window is part of [MahApps.Metro](https://github.com/MahApps/MahApps.Metro) from v3 on, so use it from there. The idea was once a child window that works without MahApps.Metro as well, but it never got that far.
+
 ## Let's get started
 
 The [NuGet](https://www.nuget.org/packages/MahApps.Metro.SimpleChildWindow) package contains an assembly with the `ChildWindow` class and the `ChildWindowManager` helper class inside.
@@ -94,7 +97,7 @@ This framework is free and can be used for free, open source and commercial appl
 
 ## License
 
-Copyright © .NET Foundation, Jan Karger, Brendan Forster, Dennis Daume, Alex Mitchell, Paul Jenkins and contributors.
+Copyright ï¿½ .NET Foundation, Jan Karger, Brendan Forster, Dennis Daume, Alex Mitchell, Paul Jenkins and contributors.
 
 MahApps.Metro is provided as-is under the MIT license. For more information see [LICENSE](./LICENSE).
 
